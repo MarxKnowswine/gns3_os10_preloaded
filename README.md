@@ -18,12 +18,12 @@ It will:
 
 
 # How to launch
-sudo apt update && sudo apt upgrade
-sudo apt -y install git
-git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git
-cd gns3_os10_preloaded
-sudo chmod 755 install.sh
-ls
+sudo apt update && sudo apt upgrade</br>
+sudo apt -y install git</br>
+git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git</br>
+cd gns3_os10_preloaded</br>
+sudo chmod 755 install.sh</br>
+ls</br>
 ./install.sh
 
 # Missing:
