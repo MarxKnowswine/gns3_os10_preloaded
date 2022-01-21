@@ -30,7 +30,7 @@ sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 # sudo wget https://www.dropbox.com/s/k461f8dov3wpf9s/1Single-Rack-OS10.gns3project -P /home/gns3-user/GNS3/
 
 # Copy config files 
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/gns_configs/* /home/gns3-user/.config/GNS3/2.2/
+sudo cp /home/gns3-user/GNS3/OS10_GNS3/gns3_configs/* /home/gns3-user/.config/GNS3/2.2/
 
 # Copy OS10 Virt images
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
