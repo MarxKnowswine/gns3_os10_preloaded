@@ -1,6 +1,6 @@
 
 # gns3_os10_preloaded
-GNS3 
+Currently incomplete project 
 
 
 This projects aims to automate the installation of a GNS3 2.2 server on a fresh install UBUNTU 20.4 LTS.
@@ -14,3 +14,7 @@ It will:
 # Prerequisites:
 - If Ubuntu is a VM, remember to enable CPU/hardware virtualization
 - GNS3 is quite demanding, usually each image takes 2GB RAM. Minimum: 4 vCPUs, 16 GB RAM, 500GB HD
+
+
+Missing:
+- upload OS10_GNS3 images on Dropbox or similar
