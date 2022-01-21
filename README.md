@@ -15,6 +15,14 @@ It will:
 - If Ubuntu is a VM, remember to enable CPU/hardware virtualization
 - GNS3 is quite demanding, usually each image takes 2GB RAM. Minimum: 4 vCPUs, 16 GB RAM, 500GB HD
 
+# How to launch
+sudo apt update && sudo apt upgrade
+sudo apt -y install git
+git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git
+cd gns3_os10_preloaded
+sudo chmod 755 install.sh
+ls
+./install.sh
 
 Missing:
 - upload OS10_GNS3 images on Dropbox or similar
