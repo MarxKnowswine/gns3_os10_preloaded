@@ -24,7 +24,7 @@ sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
 #download OS10 images
 sudo wget https://www.dropbox.com/s/if1kndaqobys8a5/OS10_GNS3.tgz -P /home/gns3-user/GNS3
 sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user/GNS3
-sudo chmod -R 774 /home/gns3-user/GNS3/OS10_GNS3/
+sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 
 # download an example project (new no OOB issue)
 # sudo wget https://www.dropbox.com/s/k461f8dov3wpf9s/1Single-Rack-OS10.gns3project -P /home/gns3-user/GNS3/
@@ -43,8 +43,8 @@ sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /ho
 
 # All the files must be owned by gns3-user with 774 permissions
 sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/GNS3/
-sudo chmod -R 774 /home/gns3-user/GNS3/
-sudo chmod -R 774 /home/gns3-user/.config/GNS3/
+sudo chmod -R 777 /home/gns3-user/GNS3/
+sudo chmod -R 777 /home/gns3-user/.config/GNS3/
 
 echo
 echo ------------------------------------------------------------------------------------------------------
