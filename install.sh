@@ -46,6 +46,9 @@ sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/
 sudo chmod -R 777 /home/gns3-user/GNS3/
 sudo chmod -R 777 /home/gns3-user/.config/GNS3/
 
+# setup permissions to ubridge
+sudo chmod 777 /usr/bin/ubridge
+
 echo
 echo ------------------------------------------------------------------------------------------------------
 echo ------------------------------------------------------------------------------------------------------
