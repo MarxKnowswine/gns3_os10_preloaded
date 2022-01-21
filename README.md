@@ -13,7 +13,9 @@ It will:
 
 # Prerequisites:
 - If Ubuntu is a VM, remember to enable CPU/hardware virtualization
+- Ubuntu needs a valid IP address and DNS (Internet connection is needed)
 - GNS3 is quite demanding, usually each image takes 2GB RAM. Minimum: 4 vCPUs, 16 GB RAM, 500GB HD
+
 
 # How to launch
 sudo apt update && sudo apt upgrade
@@ -24,5 +26,8 @@ sudo chmod 755 install.sh
 ls
 ./install.sh
 
-Missing:
+# Missing:
 - upload OS10_GNS3 images on Dropbox or similar
+
+# Notes:
+- When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times
