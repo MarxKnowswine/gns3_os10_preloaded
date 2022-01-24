@@ -41,13 +41,17 @@ sudo cp /home/gns3-user/GNS3/OS10_GNS3/config.img /home/gns3-user/GNS3/images/
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
 
+# Copy first project
+sudo cp -r /home/gns3-user/GNS3/OS10_GNS3/projects/* /home/gns3-user/GNS3/projects/
+
 # All the files must be owned by gns3-user with 774 permissions
 sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/GNS3/
 sudo chmod -R 777 /home/gns3-user/GNS3/
 sudo chmod -R 777 /home/gns3-user/.config/GNS3/
 
+
 # setup permissions to ubridge
-sudo chmod 777 /usr/bin/ubridge
+# sudo chmod 777 /usr/bin/ubridge
 
 echo
 echo ------------------------------------------------------------------------------------------------------
