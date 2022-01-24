@@ -2,7 +2,7 @@
 # Create user gns3-user with password "password"
 sudo useradd -s /bin/bash -d /home/gns3-user -m gns3-user
 echo -e "password\npassword" | sudo passwd gns3-user
-sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
+#sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
 
 # 
 sudo apt -y upgrade
@@ -48,6 +48,9 @@ sudo cp -r /home/gns3-user/GNS3/OS10_GNS3/projects/* /home/gns3-user/GNS3/projec
 sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/GNS3/
 sudo chmod -R 777 /home/gns3-user/GNS3/
 sudo chmod -R 777 /home/gns3-user/.config/GNS3/
+
+# Assign all the groups to user gns3-user
+sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
 
 
 # setup permissions to ubridge
