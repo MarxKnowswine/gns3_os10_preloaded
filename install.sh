@@ -54,7 +54,7 @@ sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,lib
 
 # Install DHCP0 and bind it to virbr0
 sudo apt -y install isc-dhcp-server
-sudo cp -p /home/gns3-user/GNS/OS10_GNS3/dhcpd.conf /etc/dhcp/
+sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/dhcpd.conf /etc/dhcp/
 sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/isc-dhcp-server /etc/default/
 sudo systemctl restart isc-dhcp-server.service
 
