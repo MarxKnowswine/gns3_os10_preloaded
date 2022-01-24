@@ -47,6 +47,7 @@ sudo cp -r /home/gns3-user/GNS3/OS10_GNS3/projects/* /home/gns3-user/GNS3/projec
 
 # All the files must be owned by gns3-user with 774 permissions
 sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/GNS3/
+sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/projects
 sudo chmod -R 777 /home/gns3-user/GNS3/
 sudo chmod -R 777 /home/gns3-user/.config/GNS3/
 
