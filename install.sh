@@ -22,7 +22,7 @@ sudo mkdir -p /home/gns3-user/GNS3/appliances
 sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
 
 #download OS10 images
-sudo wget https://www.dropbox.com/s/nfq18vujn4qzb14/OS10_GNS3.tgz -P /home/gns3-user/GNS3
+sudo wget https://www.dropbox.com/s/8vmd5mya20idub9/OS10_GNS3.tgz -P /home/gns3-user/GNS3
 sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user/GNS3
 sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 
@@ -51,6 +51,12 @@ sudo chmod -R 777 /home/gns3-user/.config/GNS3/
 
 # Assign all the groups to user gns3-user
 sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
+
+# Install DHCP0 and bind it to virbr0
+sudo apt -y install isc-dhcp-server
+sudo cp -p /home/gns3-user/GNS/OS10_GNS3/dhcpd.conf /etc/dhcp/
+sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/isc-dhcp-server /etc/default/
+sudo systemctl restart isc-dhcp-server.service
 
 
 # setup permissions to ubridge
