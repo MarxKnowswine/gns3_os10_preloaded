@@ -56,6 +56,10 @@ sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,lib
 sudo apt -y install isc-dhcp-server
 sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/dhcpd.conf /etc/dhcp/
 sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/isc-dhcp-server /etc/default/
+sudo chown root:root /etc/dhcp/dhcpd.conf
+sudo chown root:root /etc/default/isc-dhcp-server
+sudo chmod 644 /etc/dhcp/dhcpd.conf
+sudo chmod 644 /etc/default/isc-dhcp-server
 sudo systemctl restart isc-dhcp-server.service
 
 
