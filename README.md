@@ -8,6 +8,8 @@ It will:
 - Install GNS3 client
 - Automatically import configuration file
 - Automatically import OS10 10.5.3 images
+- Install a DHCP server on virbr0 to assign an IP address to OOB interfaces
+- (Optional) Copy a pre-built and pre-wired project with two OS 10 switches
 
 # Current state
 - GNS is correctly installed, configuration and images are working as expected.
@@ -27,4 +29,3 @@ sudo chmod 755 install.sh</br>
 
 # Notes:
 - When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times
-- sudo doesn't seem to work on gns3-user. Working on this
