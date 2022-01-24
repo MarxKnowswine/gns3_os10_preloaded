@@ -2,7 +2,7 @@
 # Create user gns3-user with password "password"
 sudo useradd -s /bin/bash -d /home/gns3-user -m gns3-user
 echo -e "password\npassword" | sudo passwd gns3-user
-usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
+sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
 
 # 
 sudo apt -y upgrade
