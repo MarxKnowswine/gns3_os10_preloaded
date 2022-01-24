@@ -19,7 +19,8 @@ sudo mv default.xml /etc/libvirt/qemu/networks/
 
 sudo mkdir -p /home/gns3-user/GNS3/images/QEMU
 sudo mkdir -p /home/gns3-user/GNS3/appliances
-sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
+sudo mkdir -p /home/gns3-user/GNS3/projects
+sudo mkdir -p /home/gns2.2/
 
 #download OS10 images
 sudo wget https://www.dropbox.com/s/8vmd5mya20idub9/OS10_GNS3.tgz -P /home/gns3-user/GNS3
