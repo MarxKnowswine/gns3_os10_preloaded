@@ -15,7 +15,13 @@ sudo apt -y install gns3-gui gns3-server
 sudo apt -y install konsole
 
 #virbr0 should have been created by GNS3 installation. This change IP address making a new config file
+sudo virsh net-destroy default
+sudo virsh net-undefine default
 sudo mv default.xml /etc/libvirt/qemu/networks/
+sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+sudo virsh net-start default
+sudo virsh net-autostart default
+
 
 sudo mkdir -p /home/gns3-user/GNS3/images/QEMU
 sudo mkdir -p /home/gns3-user/GNS3/appliances
@@ -56,14 +62,14 @@ sudo chmod -R 777 /home/gns3-user/.config
 sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt,wireshark gns3-user
 
 # Install DHCP0 and bind it to virbr0
-#sudo apt -y install isc-dhcp-server
-#sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/dhcpd.conf /etc/dhcp/
-#sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/isc-dhcp-server /etc/default/
-#sudo chown root:root /etc/dhcp/dhcpd.conf
-#sudo chown root:root /etc/default/isc-dhcp-server
-#sudo chmod 644 /etc/dhcp/dhcpd.conf
-#sudo chmod 644 /etc/default/isc-dhcp-server
-#sudo systemctl restart isc-dhcp-server.service
+sudo apt -y install isc-dhcp-server
+sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/dhcpd.conf /etc/dhcp/
+sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/isc-dhcp-server /etc/default/
+sudo chown root:root /etc/dhcp/dhcpd.conf
+sudo chown root:root /etc/default/isc-dhcp-server
+sudo chmod 644 /etc/dhcp/dhcpd.conf
+sudo chmod 644 /etc/default/isc-dhcp-server
+sudo systemctl restart isc-dhcp-server.service
 
 
 # setup permissions to ubridge
