@@ -23,7 +23,7 @@ sudo mkdir -p /home/gns3-user/GNS3/projects
 sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
 
 #download OS10 images
-sudo wget https://www.dropbox.com/s/lmaf70y8ai36h06/OS10_GNS3.tgz -P /home/gns3-user/GNS3
+sudo wget https://www.dropbox.com/s/o789mvxwdb10hqk/OS10_GNS3.tgz -P /home/gns3-user/GNS3
 sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user/GNS3
 sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 
