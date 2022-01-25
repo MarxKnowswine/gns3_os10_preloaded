@@ -108,4 +108,4 @@ sleep 1
 echo The system will now restart in 1 second
 sleep 1
 echo The system will now reboot. Please log in with user "gns3-user" and password "password" to start using GNS3
-sudo reboot
+#sudo reboot
