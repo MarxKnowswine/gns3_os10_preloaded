@@ -79,3 +79,33 @@ echo ---------------------------------------------------------------------------
 echo ------------------------------------------------- Dell NETWORKING ------------------------------------
 echo -----------------valerio.martini@gmail.com------------------------------------------------------------
 echo -----------------marcello.savino@gmail.com------------------------------------------------------------
+echo The system will now restart in 30 seconds
+sleep 5
+echo The system will now restart in 25 seconds
+sleep 5
+echo The system will now restart in 20 seconds
+sleep 5
+echo The system will now restart in 15 seconds
+sleep 5
+echo The system will now restart in 10 seconds
+sleep 1
+echo The system will now restart in 9 seconds
+sleep 1
+echo The system will now restart in 8 seconds
+sleep 1
+echo The system will now restart in 7 seconds
+sleep 1
+echo The system will now restart in 6 seconds
+sleep 1
+echo The system will now restart in 5 seconds
+sleep 1
+echo The system will now restart in 4 seconds
+sleep 1
+echo The system will now restart in 3 seconds
+sleep 1
+echo The system will now restart in 2 seconds
+sleep 1
+echo The system will now restart in 1 second
+sleep 1
+echo The system will now reboot. Please log in with user "gns3-user" and password "password" to start using GNS3
+sudo reboot
