@@ -29,3 +29,4 @@ sudo chmod 755 install.sh</br>
 
 # Notes:
 - When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times
+- The system will restart in order to make new virbr0 config loaded
