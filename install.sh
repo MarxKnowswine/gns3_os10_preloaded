@@ -50,9 +50,10 @@ sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/
 sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/projects
 sudo chmod -R 777 /home/gns3-user/GNS3/
 sudo chmod -R 777 /home/gns3-user/.config/GNS3/
+sudo chmod -R 777 /home/gns3-user/.config
 
 # Assign all the groups to user gns3-user
-sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt gns3-user
+sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt,wireshark gns3-user
 
 # Install DHCP0 and bind it to virbr0
 sudo apt -y install isc-dhcp-server
