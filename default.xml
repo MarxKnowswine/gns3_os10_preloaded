@@ -12,8 +12,5 @@ or other application using the libvirt API.
   <bridge name='virbr0' stp='on' delay='0'/>
   <mac address='52:54:00:4a:d8:c2'/>
   <ip address='10.10.10.1' netmask='255.255.255.0'>
-    <dhcp>
-      <range start='10.10.10.100' end='10.10.10.200'/>
-    </dhcp>
   </ip>
 </network>
