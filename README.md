@@ -6,13 +6,14 @@ It will:
 - Install GNS3 server. Minimal interaction is needed (will work on this)
 - Create a dedicated user "gns3-user" with password "password"
 - Install GNS3 client
-- Automatically import configuration file
+- Automatically import GNS3 configuration files
 - Automatically import OS10 10.5.3 images
 - Install a DHCP server on virbr0 to assign an IP address to OOB interfaces
-- (Optional) Copy a pre-built and pre-wired project with two OS 10 switches
+- (Optional) Copy a pre-built and pre-wired project with two OS 10 switches in VLT
+- (Optional) import a configuration via a second script <strong> !!!!!! Work in progress !!!!!!</strong>
 
 # Current state
-- GNS is correctly installed, configuration and images are working as expected.
+- GNS is correctly installed, configuration and images are working as expected. Working on OS10 configuration import script
 
 # Prerequisites:
 - If Ubuntu is a VM, remember to enable CPU/hardware virtualization
@@ -20,13 +21,19 @@ It will:
 - GNS3 is quite demanding, usually each image takes 2GB RAM. Minimum: 4 vCPUs, 16 GB RAM, 500GB HD
 
 # How to launch
+<strong>1) Install the environment</strong></br>
 sudo apt update && sudo apt upgrade</br>
 sudo apt -y install git</br>
 git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git</br>
 cd gns3_os10_preloaded</br>
 sudo chmod 755 install.sh</br>
-./install.sh
+./install.sh</br>
+<strong>2) Create your own project or import the pre-built one</strong></br>
+Run gns3 (via gnome terminal or GUI)</br>
+If you want to import the pre-build project, just go on File -> Open Project -> /home/gns3-user/GNS3/projects/OS10_GNS3.gns3a
+Once powered on the two switches, they will need at least 10 minutes to install the OS from scratch and a first reboot. The switches will take, respectively, 10.10.10.11(TOR-1) and 10.10.10.12(TOR-2)</br>
+<strong>2) Imporrt switches configration via a script</strong></br>
+!!!!!! Work in progress !!!!!!
 
 # Notes:
 - When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times
-- The system will restart in order to make new virbr0 config loaded
