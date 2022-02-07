@@ -87,8 +87,9 @@ do
                 then
                         git clone https://github.com/val3r1o/os10-startup-ansible
                         cd os10-startup-ansible
-                        chmod +x initialize.sh
-                        ./initialize.sh
+                        sed -n -e :a -e '1,9!{P;N;D;};N;ba' initialize.sh > initialize2.sh
+                        chmod +x initialize2.sh
+                        ./initialize2.sh
         fi
         if [ "$var" == "n" ]
                 then echo "Ok I won't install ansible"
@@ -99,10 +100,10 @@ do
 done
 
 # Cloning https://github.com/val3r1o/os10-backup-restore project to push configuration to the two nodes
-#git clone https://github.com/val3r1o/os10-backup-restore
-#sudo cp -r ../os10-backup-restore /home/gns3-user/
-#sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
-#sudo chmod -R 777 /home/gns3-user/os10-backup-restore
+git clone https://github.com/val3r1o/os10-backup-restore
+sudo cp -r os10-backup-restore /home/gns3-user/
+sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
+sudo chmod -R 777 /home/gns3-user/os10-backup-restore
 
 
 echo
