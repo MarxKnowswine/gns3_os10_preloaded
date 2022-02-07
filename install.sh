@@ -2,7 +2,9 @@
 # Create user gns3-user with password "password"
 sudo useradd -s /bin/bash -d /home/gns3-user -m gns3-user
 echo -e "password\npassword" | sudo passwd gns3-user
-
+echo ------------------------------------------------------------------------------------------------------
+echo Installing GNS3 server and GUI
+echo ------------------------------------------------------------------------------------------------------
 sudo apt update
 sudo apt -y upgrade
 sudo apt -y install net-tools openssh-server
@@ -12,6 +14,9 @@ sudo add-apt-repository ppa:gns3/ppa -y
 sudo apt -y install gns3-gui gns3-server konsole
 
 #virbr0 should have been created by GNS3 installation. This change IP address making a new config file
+echo ------------------------------------------------------------------------------------------------------
+echo Modifying virbr0 IP address and definying DHCP server 
+echo ------------------------------------------------------------------------------------------------------
 sudo virsh net-destroy default
 sudo virsh net-undefine default
 sudo mv default.xml /etc/libvirt/qemu/networks/
@@ -26,6 +31,9 @@ sudo mkdir -p /home/gns3-user/GNS3/projects
 sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
 
 #download OS10 images
+echo ------------------------------------------------------------------------------------------------------
+echo Downloading OS10 images, project and configuration
+echo ------------------------------------------------------------------------------------------------------
 sudo wget https://www.dropbox.com/s/o789mvxwdb10hqk/OS10_GNS3.tgz -P /home/gns3-user/GNS3
 sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user/GNS3
 sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
@@ -34,9 +42,15 @@ sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 # sudo wget https://www.dropbox.com/s/k461f8dov3wpf9s/1Single-Rack-OS10.gns3project -P /home/gns3-user/GNS3/
 
 # Copy config files 
+echo ------------------------------------------------------------------------------------------------------
+echo Copying GNS3 config files
+echo ------------------------------------------------------------------------------------------------------
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/gns3_configs/* /home/gns3-user/.config/GNS3/2.2/
 
 # Copy OS10 Virt images
+echo ------------------------------------------------------------------------------------------------------
+echo Copying OS10 images
+echo ------------------------------------------------------------------------------------------------------
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-Installer-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
@@ -46,6 +60,9 @@ sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /ho
 sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
 
 # Copy first project
+echo ------------------------------------------------------------------------------------------------------
+echo Copying built-in project
+echo ------------------------------------------------------------------------------------------------------
 sudo cp -r /home/gns3-user/GNS3/OS10_GNS3/projects/* /home/gns3-user/GNS3/projects/
 
 # All the files must be owned by gns3-user with 774 permissions
@@ -57,16 +74,6 @@ sudo chmod -R 777 /home/gns3-user/.config
 
 # Assign all the groups to user gns3-user
 sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt,wireshark gns3-user
-
-# Install DHCP0 and bind it to virbr0
-#sudo apt -y install isc-dhcp-server
-#sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/dhcpd.conf /etc/dhcp/
-#sudo cp -p /home/gns3-user/GNS3/OS10_GNS3/isc-dhcp-server /etc/default/
-#sudo chown root:root /etc/dhcp/dhcpd.conf
-#sudo chown root:root /etc/default/isc-dhcp-server
-#sudo chmod 644 /etc/dhcp/dhcpd.conf
-#sudo chmod 644 /etc/default/isc-dhcp-server
-#sudo systemctl restart isc-dhcp-server.service
 
 
 echo
