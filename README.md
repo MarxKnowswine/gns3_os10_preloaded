@@ -37,5 +37,6 @@ Once powered on the two switches, they will need at least 10 minutes to install 
 !!!!!! Work in progress !!!!!!
 
 # Notes:
+- This project has been developed starting from Val3r1o repository https://github.com/val3r1o/gns3-automation-fabric. It uses two other projects from the same user.
 - When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times
 - When importing the built-in project, the two switches will receive respectively 10.10.10.11 and 10.10.10.12
