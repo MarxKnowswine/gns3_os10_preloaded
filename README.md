@@ -10,7 +10,8 @@ It will:
 - Automatically import OS10 10.5.3 images
 - Install a DHCP server on virbr0 to assign an IP address to OOB interfaces
 - (Optional) Copy a pre-built and pre-wired project with two OS 10 switches in VLT
-- (Optional) import a configuration via a second script <strong> !!!!!! Work in progress !!!!!!</strong>
+- (Optional) Install ansible and Dell Ansible roles
+- (Optional) Import a configuration via a second script <strong> !!!!!! Work in progress !!!!!!</strong>
 
 # Current state
 - GNS is correctly installed, configuration and images are working as expected. Working on OS10 configuration import script
