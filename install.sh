@@ -75,13 +75,45 @@ sudo chmod -R 777 /home/gns3-user/.config
 # Assign all the groups to user gns3-user
 sudo usermod -a -G adm,cdrom,sudo,dip,plugdev,lpadmin,lxd,sambashare,ubridge,libvirt,wireshark gns3-user
 
+# Installing Ansible repo through https://github.com/val3r1o/os10-startup-ansible
+
+var="x"
+while [ "$var" != "y" ] && [ "$var" != "n" ]
+do
+        echo Do you wish to install ansible and all dependencies? Type y or n
+        read var
+
+        if [ "$var" == "y" ]
+                then
+                        git clone https://github.com/val3r1o/os10-startup-ansible
+                        cd os10-startup-ansible
+                        chmod +x initialize.sh
+                        ./initialize.sh
+        fi
+        if [ "$var" == "n" ]
+                then echo "Ok I won't install ansible"
+        fi
+        if [ "$var" != "n" ] && [ "$var" != "y" ]
+                then echo "Ops, you probably made a typo"
+        fi
+done
+
+# Cloning https://github.com/val3r1o/os10-backup-restore project to push configuration to the two nodes
+git clone https://github.com/val3r1o/os10-backup-restore
+cp -r os10-backup-restore /home/gns3-user/
+sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
+sudo chmod -R 777 /home/gns3-user/os10-backup-restore
+
 
 echo
 echo ------------------------------------------------------------------------------------------------------
-echo ------------------------------------------------------------------------------------------------------
 echo -------------------------------------- Thats all folks "!!" ------------------------------------------
 echo ------------------------------------------------------------------------------------------------------
-echo ------------------ This is an automatic script -------------------------------------------------------
+echo "1) Log in with the new user gns3-user (password is: password)"
+echo "2) Launch GNS3 and import OS10-rack.gns3 project (File -> Open Project -> /home/gns3-user/GNS3/projects)"
+echo "3) Wait at least 10 minutes for the two devices to install OS10 (just the first time)"
+echo "4) Go in /home/gns3-user/os10-backup-restore: cd /home/gns3-user/os10-backup-restore"
+echo "5) Launch the ansible playbook to push config into the two devices: ansible-playbook pushconfig.yml"
 echo ------------------------------------------------------------------------------------------------------
 echo ------------------------------------------------- Dell NETWORKING ------------------------------------
 echo -----------------valerio.martini@gmail.com------------------------------------------------------------
