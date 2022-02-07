@@ -103,7 +103,7 @@ done
 git clone https://github.com/val3r1o/os10-backup-restore
 sudo cp -r os10-backup-restore /home/gns3-user/
 sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
-sudo chmod -R 777 /home/gns3-user/os10-backup-restore
+sudo chmod -R 774 /home/gns3-user/os10-backup-restore
 
 
 echo
