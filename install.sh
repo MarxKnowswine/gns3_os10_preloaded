@@ -101,14 +101,13 @@ do
 done
 
 # Cloning https://github.com/val3r1o/os10-backup-restore project to push configuration to the two nodes
-#cd ..
-#git clone https://github.com/val3r1o/os10-backup-restore
-#rm os10-backup-restore/templates/*
-#cp leaf-1.j2 os10-backup-restore/templates/
-#cp leaf-2.j2 os10-backup-restore/templates/
-#sudo cp -r os10-backup-restore /home/gns3-user/
-#sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
-#sudo chmod -R 774 /home/gns3-user/os10-backup-restore
+git clone https://github.com/val3r1o/os10-backup-restore
+rm os10-backup-restore/templates/*
+cp leaf-1.j2 os10-backup-restore/templates/
+cp leaf-2.j2 os10-backup-restore/templates/
+sudo cp -r os10-backup-restore /home/gns3-user/
+sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
+sudo chmod -R 774 /home/gns3-user/os10-backup-restore
 
 
 echo
