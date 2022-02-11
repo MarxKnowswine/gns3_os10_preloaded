@@ -90,6 +90,7 @@ do
                         sed -n -e :a -e '1,9!{P;N;D;};N;ba' initialize.sh > initialize2.sh
                         chmod +x initialize2.sh
                         ./initialize2.sh
+                        cd ..
         fi
         if [ "$var" == "n" ]
                 then echo "Ok I won't install ansible"
@@ -102,7 +103,7 @@ done
 # Cloning https://github.com/val3r1o/os10-backup-restore project to push configuration to the two nodes
 git clone https://github.com/val3r1o/os10-backup-restore
 rm os10-backup-restore/templates/*
-cp leaf-1.j2 os10-backup-restore/templates/
+cp /home/gns3-user/leaf-1.j2 os10-backup-restore/templates/
 cp leaf-2.j2 os10-backup-restore/templates/
 sudo cp -r os10-backup-restore /home/gns3-user/
 sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
