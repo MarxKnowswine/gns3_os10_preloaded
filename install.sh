@@ -101,6 +101,7 @@ do
 done
 
 # Cloning https://github.com/val3r1o/os10-backup-restore project to push configuration to the two nodes
+cd ..
 git clone https://github.com/val3r1o/os10-backup-restore
 rm os10-backup-restore/templates/*
 cp /home/gns3-user/leaf-1.j2 os10-backup-restore/templates/
