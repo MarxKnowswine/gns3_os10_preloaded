@@ -11,7 +11,7 @@ It will:
 - Install a DHCP server on virbr0 to assign an IP address to OOB interfaces
 - Copy a pre-built and pre-wired project with two OS 10 switches in VLT
 - (Optional) Install ansible and Dell Ansible roles (https://github.com/val3r1o/os10-startup-ansible)
-- Optional Import a configuration via a second script (https://github.com/val3r1o/os10-backup-restore) <strong> !!!!!! Work in progress !!!!!!</strong>
+- Optional Import a configuration via a second script (https://github.com/val3r1o/os10-backup-restore)
 
 # Current state
 - GNS is correctly installed, configuration and images are working as expected. Working on OS10 configuration import script
@@ -33,8 +33,8 @@ sudo chmod 755 install.sh</br>
 Run gns3 (via gnome terminal or GUI)</br>
 If you want to import the pre-build project, just go on File -> Open Project -> /home/gns3-user/GNS3/projects/OS10_GNS3.gns3a
 Once powered on the two switches, they will need at least 10 minutes to install the OS from scratch and a first reboot. The switches will take, respectively, 10.10.10.11(TOR-1) and 10.10.10.12(TOR-2)</br>
-<strong>3) Imporrt switches configration via a script</strong></br>
-!!!!!! Work in progress !!!!!!
+3) Import switches configuration via a script</br>
+
 
 # Notes:
 - This project has been developed starting from Val3r1o repository https://github.com/val3r1o/gns3-automation-fabric. It uses two other projects from the same user.
