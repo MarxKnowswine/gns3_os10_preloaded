@@ -34,8 +34,8 @@ sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
 echo ------------------------------------------------------------------------------------------------------
 echo Downloading OS10 images, project and configuration
 echo ------------------------------------------------------------------------------------------------------
-sudo wget https://www.dropbox.com/s/o789mvxwdb10hqk/OS10_GNS3.tgz -P /home/gns3-user/GNS3
-sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user/GNS3
+sudo wget https://www.dropbox.com/s/fltqikrv20w7jb1/gns3_images_configs.tar.gz -P /home/gns3-user
+sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user
 sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 
 # download an example project (new no OOB issue)
