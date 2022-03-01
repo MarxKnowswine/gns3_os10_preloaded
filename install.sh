@@ -25,17 +25,17 @@ sudo virsh net-start default
 sudo virsh net-autostart default
 
 
-sudo mkdir -p /home/gns3-user/GNS3/images/QEMU
-sudo mkdir -p /home/gns3-user/GNS3/appliances
-sudo mkdir -p /home/gns3-user/GNS3/projects
-sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
+#sudo mkdir -p /home/gns3-user/GNS3/images/QEMU
+#sudo mkdir -p /home/gns3-user/GNS3/appliances
+#sudo mkdir -p /home/gns3-user/GNS3/projects
+#sudo mkdir -p /home/gns3-user/.config/GNS3/2.2/
 
 #download OS10 images
 echo ------------------------------------------------------------------------------------------------------
 echo Downloading OS10 images, project and configuration
 echo ------------------------------------------------------------------------------------------------------
 sudo wget https://www.dropbox.com/s/fltqikrv20w7jb1/gns3_images_configs.tar.gz -P /home/gns3-user
-sudo tar xzvf /home/gns3-user/GNS3/OS10_GNS3.tgz -C /home/gns3-user
+sudo tar xzvf /home/gns3-user/gns3_images_configs.tar.gz -C /home/gns3-user
 sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 
 # download an example project (new no OOB issue)
@@ -45,25 +45,25 @@ sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 echo ------------------------------------------------------------------------------------------------------
 echo Copying GNS3 config files
 echo ------------------------------------------------------------------------------------------------------
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/gns3_configs/* /home/gns3-user/.config/GNS3/2.2/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/gns3_configs/* /home/gns3-user/.config/GNS3/2.2/
 
 # Copy OS10 Virt images
 echo ------------------------------------------------------------------------------------------------------
 echo Copying OS10 images
 echo ------------------------------------------------------------------------------------------------------
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-Installer-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-Disk-1.0.0.vmdk /home/gns3-user/GNS3/images/
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/config.img /home/gns3-user/GNS3/images/
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
-sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-Installer-10.5.3.0.44.vmdk /home/gns3-user/GNS3/images/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-Disk-1.0.0.vmdk /home/gns3-user/GNS3/images/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/config.img /home/gns3-user/GNS3/images/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S5212F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
+#sudo cp /home/gns3-user/GNS3/OS10_GNS3/OS10-platform-S4128F-10.5.3.0.44.vmdk /home/gns3-user/GNS3/appliances/
 
 # Copy first project
 echo ------------------------------------------------------------------------------------------------------
 echo Copying built-in project
 echo ------------------------------------------------------------------------------------------------------
-sudo cp -r /home/gns3-user/GNS3/OS10_GNS3/projects/* /home/gns3-user/GNS3/projects/
+#sudo cp -r /home/gns3-user/GNS3/OS10_GNS3/projects/* /home/gns3-user/GNS3/projects/
 
 # All the files must be owned by gns3-user with 774 permissions
 sudo chown -R gns3-user:gns3-user /home/gns3-user/GNS3/ /home/gns3-user/.config/GNS3/
