@@ -1,0 +1,20 @@
+SonicFabric-SPINE-1 ansible_host=10.10.10.21
+SonicFabric-LEAF-1 ansible_host=10.10.10.22
+SonicFabric-SPINE-2 ansible_host=10.10.10.23
+SonicFabric-LEAF-2 ansible_host=10.10.10.24
+SonicFabric-LEAF-3 ansible_host=10.10.10.25
+SonicFabric-LEAF-4 ansible_host=10.10.10.26
+
+[spine]
+SonicFabric-SPINE-1
+SonicFabric-SPINE-2
+
+[leaf]
+SonicFabric-LEAF-1
+SonicFabric-LEAF-2
+SonicFabric-LEAF-3
+SonicFabric-LEAF-4
+
+[all:children]
+spine
+leaf

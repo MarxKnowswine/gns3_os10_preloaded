@@ -1,0 +1,98 @@
+is_border_leaf: false
+lacp_pcs: []
+mclag_member_pcs: []
+sonic_bgp:
+  - bestpath:
+      as_path:
+        multipath_relax: true
+    bgp_as: '{{ bgp_asn }}'
+    router_id: '{{ bgp_router_id }}'
+sonic_bgp_af:
+  - address_family:
+      afis:
+        - afi: ipv4
+          max_path:
+            ebgp: 2
+          redistribute:
+            - protocol: connected
+          safi: unicast
+        - advertise_all_vni: true
+          afi: l2vpn
+          safi: evpn
+    bgp_as: '{{bgp_asn}}'
+sonic_bgp_neighbors:
+  - bgp_as: '{{bgp_asn}}'
+    neighbors:
+      - neighbor: Eth1/8
+        peer_group: spine-leaf
+      - neighbor: Eth1/7
+        peer_group: spine-leaf
+    peer_group:
+      - '{{sonic_bgp_spineleaf_peergroup}}'
+sonic_bgp_neighbors_af:
+  - bgp_as: '{{bgp_asn}}'
+    neighbors:
+      - address_family: '{{sonic_bgp_fabriclink_neighbors_aflist}}'
+        neighbor: Eth1/8
+      - address_family: '{{sonic_bgp_fabriclink_neighbors_aflist}}'
+        neighbor: Eth1/7
+sonic_config:
+  lines: []
+sonic_interfaces:
+  - description: '"MCLAG to SonicFabric-LEAF-4 Eth1/3"'
+    enabled: true
+    name: Eth1/3
+  - description: '"MCLAG to SonicFabric-LEAF-4 Eth1/4"'
+    enabled: true
+    name: Eth1/4
+  - description: '"Uplink to SonicFabric-SPINE-2 Eth1/3"'
+    enabled: true
+    name: Eth1/7
+  - description: '"Uplink to SonicFabric-SPINE-1 Eth1/3"'
+    enabled: true
+    name: Eth1/8
+  - description: router-id
+    name: '{{ loopback_inf0 }}'
+  - description: vtep
+    name: '{{ loopback_inf1 }}'
+sonic_l2_interfaces: []
+sonic_l3_interfaces:
+  - ipv6:
+      enabled: true
+    name: Eth1/7
+  - ipv6:
+      enabled: true
+    name: Eth1/8
+  - ipv4:
+      addresses:
+        - address: '{{ loopback0_ip }}'
+    name: '{{ loopback_inf0 }}'
+  - ipv4:
+      addresses:
+        - address: '{{ loopback1_ip }}'
+    name: '{{ loopback_inf1 }}'
+sonic_lag_interfaces:
+  - members:
+      interfaces:
+        - member: Eth1/3
+        - member: Eth1/4
+    name: PortChannel100
+sonic_system:
+  anycast_address:
+    ipv4: true
+    mac_address: '{{ anycast_mac_address }}'
+  hostname: SonicFabric-LEAF-3
+  interface_naming: standard
+sonic_vlans: []
+sonic_vrf_interfaces:
+  - members:
+      interfaces: []
+    name: Vrf1
+sonic_vxlans:
+  - evpn_nvo: nvo1
+    name: vtep3
+    source_ip: '{{ loopback1_ip.split(''/'')[0] }}'
+    vlan_map: []
+    vrf_map: []
+vlans: []
+vrfs: []
