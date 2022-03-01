@@ -36,7 +36,7 @@ echo Downloading OS10 images, project and configuration
 echo ------------------------------------------------------------------------------------------------------
 sudo wget https://www.dropbox.com/s/fltqikrv20w7jb1/gns3_images_configs.tar.gz -P /home/gns3-user
 sudo tar xzvf /home/gns3-user/gns3_images_configs.tar.gz -C /home/gns3-user
-sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
+# sudo chmod -R 777 /home/gns3-user/GNS3/OS10_GNS3/
 
 # download an example project (new no OOB issue)
 # sudo wget https://www.dropbox.com/s/k461f8dov3wpf9s/1Single-Rack-OS10.gns3project -P /home/gns3-user/GNS3/
