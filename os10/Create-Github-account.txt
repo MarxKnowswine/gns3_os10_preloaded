@@ -1,0 +1,15 @@
+sudo apt install git
+git config --global user.name "YOURNAME"
+git config --global user.email "YOURMAIL"
+
+# You need to have a git account -> github.com
+# On your account FORK this Repository
+# ##
+
+# Create a new branch "Project1"
+
+echo "DESCRIPTION ON MAIN PAGE" >> README.md
+git add -A
+git commit -a -m "add a smart comment"
+git push origin Project1
+git status

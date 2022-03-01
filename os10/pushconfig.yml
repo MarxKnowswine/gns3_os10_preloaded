@@ -1,0 +1,8 @@
+---
+- name: Ansible Playbook -> OS10 copy_config
+  hosts: switches
+  connection: network_cli
+# no gather_facts is faster
+  gather_facts: no
+  roles:
+    - dellemc.os10.os10_copy_config

@@ -1,0 +1,4 @@
+hostname: Leaf-1
+ansible_become: yes
+ansible_network_os: dellemc.os10.os10
+# possible to use jinja here
