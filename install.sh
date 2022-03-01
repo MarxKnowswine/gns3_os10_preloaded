@@ -86,8 +86,8 @@ done
 #rm os10-backup-restore/inventory
 #cp os10/inventory os10-backup-restore/
 sudo cp -r os10/ /home/gns3-user/
-sudo chown -R gns3-user:gns3-user /home/gns3-user/os10-backup-restore
-sudo chmod -R 774 /home/gns3-user/os10-backup-restore
+sudo chown -R gns3-user:gns3-user /home/gns3-user/os10
+sudo chmod -R 774 /home/gns3-user/os10
 
 
 echo
