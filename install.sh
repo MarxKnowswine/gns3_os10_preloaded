@@ -95,9 +95,12 @@ echo ---------------------------------------------------------------------------
 echo -------------------------------------- Thats all folks "!!" ------------------------------------------
 echo ------------------------------------------------------------------------------------------------------
 echo "1) Log in with the new user gns3-user (password is: password)"
-echo "2) Launch GNS3 and import OS10-rack.gns3 project (File -> Open Project -> /home/gns3-user/GNS3/projects)"
-echo "3) Wait at least 10 minutes for the two devices to install OS10 (just the first time)"
+echo "2) Launch GNS3 and import OS10 or Sonic Project (File -> Open Project -> /home/gns3-user/GNS3/projects)"
+echo "If you want to run OS10 lab:"
+echo "3) Once you start the devices, wait at least 10 minutes for them to install OS10 (just the first time)"
 echo "4) Go in /home/gns3-user/os10-backup-restore: cd /home/gns3-user/os10-backup-restore"
+echo "If you want to run SONiC lab"
+echo "3) Go in /home/gns3-user/sonic: cd /home/gns3-user/sonic"
 echo "5) Launch the ansible playbook to push config into the two devices: ansible-playbook pushconfig.yml"
 echo ------------------------------------------------------------------------------------------------------
 echo ------------------------------------------------- Dell NETWORKING ------------------------------------
