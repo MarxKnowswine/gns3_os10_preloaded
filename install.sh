@@ -104,7 +104,7 @@ echo "3) Once you start the devices, wait at least 10 minutes for them to instal
 echo "4) Go in /home/gns3-user/os10-backup-restore: cd /home/gns3-user/os10-backup-restore"
 echo "If you want to run SONiC lab"
 echo "3) Go in /home/gns3-user/sonic: cd /home/gns3-user/sonic"
-echo "5) Launch the ansible playbook to push config into the two devices: ansible-playbook pushconfig.yml"
+echo "4) Launch the ansible script to push the config ./ansible_deploy.sh"
 echo ------------------------------------------------------------------------------------------------------
 echo ------------------------------------------------- Dell NETWORKING ------------------------------------
 echo -----------------valerio.martini@gmail.com------------------------------------------------------------
