@@ -32,9 +32,11 @@ sudo chmod 755 install.sh
 Once the installation is over:
 1) Log in with the new user gns3-user (password is: password)</br>
 2) Launch GNS3 and import OS10 or Sonic Project (File -> Open Project -> /home/gns3-user/GNS3/projects)</br>
+
 If you want to run OS10 lab:</br>
 3) Once you start the devices, wait at least 10 minutes for them to install OS10 (just the first time)</br>
 4) Go in /home/gns3-user/os10-backup-restore: ```cd /home/gns3-user/os10-backup-restore```
+
 If you want to run SONiC lab:</br>
 3) Go in /home/gns3-user/sonic: ```cd /home/gns3-user/sonic```
 4) Launch the ansible script to push the config: ```./ansible_deploy.sh```
