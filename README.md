@@ -26,6 +26,9 @@ git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git</br>
 cd gns3_os10_preloaded</br>
 sudo chmod 755 install.sh</br>
 ./install.sh</br>
+
+# How to use
+Once the installation is over
 <strong>2) Create your own project or import the pre-built one</strong></br>
 Run gns3 (via gnome terminal or GUI)</br>
 If you want to import the pre-build project, just go on File -> Open Project -> /home/gns3-user/GNS3/projects/OS10_GNS3.gns3a
@@ -36,4 +39,4 @@ Once powered on the two switches, they will need at least 10 minutes to install 
 # Notes:
 - This project has been developed starting from Val3r1o repository https://github.com/val3r1o/gns3-automation-fabric. It uses two other projects from the same user.
 - When prompted whether non-root users should be allowed to use wireshark and ubridge, select ‘Yes’ both times
-- When importing the built-in project, the two switches will receive respectively 10.10.10.11 and 10.10.10.12
+- Please check the output of the script. Sometimes Ubuntu repos are not working and unable to install GNS3 (it happened several times to me). In case of issue, just run again the script
