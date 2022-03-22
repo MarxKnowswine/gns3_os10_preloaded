@@ -7,14 +7,11 @@ It will:
 - Create a dedicated user "gns3-user" with password "password"
 - Install GNS3 client
 - Automatically import GNS3 configuration files
-- Automatically import OS10 10.5.3 images
+- Automatically import OS10 10.5.3.2 and Sonic 3.5 images
 - Install a DHCP server on virbr0 to assign an IP address to OOB interfaces
-- Copy a pre-built and pre-wired project with two OS 10 switches in VLT
+- Copy two pre-built and pre-wired projects with OS 10 switches and Sonic switches
 - (Optional) Install ansible and Dell Ansible roles (https://github.com/val3r1o/os10-startup-ansible)
 - Optional Import a configuration via a second script (https://github.com/val3r1o/os10-backup-restore)
-
-# Current state
-- GNS is correctly installed, configuration and images are working as expected. Working on OS10 configuration import script
 
 # Prerequisites:
 - If Ubuntu is a VM, remember to enable CPU/hardware virtualization
