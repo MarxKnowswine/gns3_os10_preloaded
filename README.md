@@ -28,12 +28,15 @@ sudo chmod 755 install.sh</br>
 ./install.sh</br>
 
 # How to use
-Once the installation is over
-<strong>2) Create your own project or import the pre-built one</strong></br>
-Run gns3 (via gnome terminal or GUI)</br>
-If you want to import the pre-build project, just go on File -> Open Project -> /home/gns3-user/GNS3/projects/OS10_GNS3.gns3a
-Once powered on the two switches, they will need at least 10 minutes to install the OS from scratch and a first reboot. The switches will take, respectively, 10.10.10.11(TOR-1) and 10.10.10.12(TOR-2)</br>
-3) Import switches configuration via a script</br>
+Once the installation is over:
+1) Log in with the new user gns3-user (password is: password)</br>
+2) Launch GNS3 and import OS10 or Sonic Project (File -> Open Project -> /home/gns3-user/GNS3/projects)</br>
+If you want to run OS10 lab:</br>
+3) Once you start the devices, wait at least 10 minutes for them to install OS10 (just the first time)</br>
+4) Go in /home/gns3-user/os10-backup-restore: cd /home/gns3-user/os10-backup-restore</br>
+If you want to run SONiC lab:</br>
+3) Go in /home/gns3-user/sonic: cd /home/gns3-user/sonic</br>
+4) Launch the ansible script to push the config ./ansible_deploy.sh</br>
 
 
 # Notes:
