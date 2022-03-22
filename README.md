@@ -20,23 +20,24 @@ It will:
 
 # How to launch
 <strong>1) Install the environment</strong></br>
-sudo apt update && sudo apt upgrade</br>
-sudo apt -y install git</br>
-git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git</br>
-cd gns3_os10_preloaded</br>
-sudo chmod 755 install.sh</br>
-./install.sh</br>
-
+``` shell 
+sudo apt update && sudo apt upgrade
+sudo apt -y install git
+git clone https://github.com/MarxKnowswine/gns3_os10_preloaded.git
+cd gns3_os10_preloaded
+sudo chmod 755 install.sh
+./install.sh
+```
 # How to use
 Once the installation is over:
 1) Log in with the new user gns3-user (password is: password)</br>
 2) Launch GNS3 and import OS10 or Sonic Project (File -> Open Project -> /home/gns3-user/GNS3/projects)</br>
 If you want to run OS10 lab:</br>
 3) Once you start the devices, wait at least 10 minutes for them to install OS10 (just the first time)</br>
-4) Go in /home/gns3-user/os10-backup-restore: cd /home/gns3-user/os10-backup-restore</br>
+4) Go in /home/gns3-user/os10-backup-restore: ```cd /home/gns3-user/os10-backup-restore```
 If you want to run SONiC lab:</br>
-3) Go in /home/gns3-user/sonic: cd /home/gns3-user/sonic</br>
-4) Launch the ansible script to push the config ./ansible_deploy.sh</br>
+3) Go in /home/gns3-user/sonic: ```cd /home/gns3-user/sonic```
+4) Launch the ansible script to push the config: ```./ansible_deploy.sh```
 
 
 # Notes:
